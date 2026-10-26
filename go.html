@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Redirection vers Pix</title>
+</head>
+<body>
+<p>Redirection vers votre parcours Pix en cours...</p>
+<script>
+(function () {
+  var CAMPAGNE_A = 'https://app.pix.fr/campagnes/CODE_A';
+  var CAMPAGNE_B = 'https://app.pix.fr/campagnes/CODE_B';
+
+  var id = new URLSearchParams(window.location.search).get('id') || '';
+  var cible = Math.random() < 0.5 ? CAMPAGNE_A : CAMPAGNE_B;
+
+  // N'ajoute l'identifiant que s'il a bien été remplacé par 123FormBuilder
+  if (id && id.indexOf('request') !== 0) {
+    cible += '?participantExternalId=' + encodeURIComponent(id);
+  }
+  window.location.replace(cible);
+})();
+</script>
+</body>
+</html>
