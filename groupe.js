@@ -1,5 +1,5 @@
 (function () {
-  var ID_CHAMP = 'controlXXXXXXX'; // id du champ "groupe", à adapter
+  var ID_CHAMP = 'control3622417'; // id du champ "groupe", à adapter
 
   function tirer() {
     var champ = document.getElementById(ID_CHAMP);
